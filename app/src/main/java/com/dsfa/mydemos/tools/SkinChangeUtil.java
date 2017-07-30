@@ -3,6 +3,7 @@ package com.dsfa.mydemos.tools;
 import android.content.Context;
 import android.content.res.AssetManager;
 import android.content.res.Resources;
+import android.util.Log;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -21,7 +22,9 @@ public class SkinChangeUtil {
             Resources newResources = new Resources(manager,currentResources.getDisplayMetrics(),currentResources.getConfiguration());
 
         } catch (InstantiationException e) {
+
             e.printStackTrace();
+            Log.e("TAG",e.toString());
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (NoSuchMethodException e) {
